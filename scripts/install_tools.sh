@@ -5,10 +5,10 @@ set -x
 
 # Configuramos las variables 
 #------------------------------------
-#PHPMYADMIN_APP_PASSWORD=123456
+PHPMYADMIN_APP_PASSWORD=123456
 #------------------------------------
 #Actualizamos repositorios 
-#apt update
+apt update
 
 #Actualizamos los paquetes 
 #apt upgrade -y
@@ -19,4 +19,4 @@ echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selecti
 echo "phpmyadmin phpmyadmin/mysql/app-pass password $PHPMYADMIN_APP_PASSWORD" | debconf-set-selections
 echo "phpmyadmin phpmyadmin/app-password-confirm password $PHPMYADMIN_APP_PASSWORD" | debconf-set-selections
 #Instalamos phpmyadmin
-apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl 
+apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
