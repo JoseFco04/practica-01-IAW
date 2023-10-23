@@ -10,7 +10,7 @@ Repositorio para la primera practica en amazon
 ### Le pulsamos en permitir el trafico http y https para que añada sus grupos de seguridad directamente
 ![Cap 3](https://github.com/JoseFco04/practica-01-IAW/assets/145347148/1930e39b-2550-4f2f-85e6-027bf242ffdc)
 
-### Asignnamos una ip elástica a la instancia 
+### Asignamos una ip elástica a la instancia 
 ![Cap 4](https://github.com/JoseFco04/practica-01-IAW/assets/145347148/1c768fb3-d1e0-4fef-8fa6-b7f650e736b6)
 
 ### El script del install lamp es el siguiente, son los siguientes comandos con su comentario de que hacen 
