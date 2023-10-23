@@ -101,7 +101,13 @@ htpasswd -bc /etc/apache2/.htpasswd $STATS_USERNAME $STATS_PASSWORD
 cp ../conf/000-default-stats.conf /etc/apache2/sites-available/000-default.conf
 
 ### Y el archivo .env donde guardamos las variables de las contraseñas y nombres de usuario
-
+### Configuramos las variables 
+### ------------------------------------
+PHPMYADMIN_APP_PASSWORD=123456
+APP_USER=usuario
+APP_PASSWORD=password
+STATS_USERNAME=Josefco
+STATS_PASSWORD=123456
 
 
 ### Reiniciamos el servicio de Apache 
