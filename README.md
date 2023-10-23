@@ -100,7 +100,9 @@ htpasswd -bc /etc/apache2/.htpasswd $STATS_USERNAME $STATS_PASSWORD
 ### Copiamos ek archivo de configuración dde apache con la configuracion del acceso 
 cp ../conf/000-default-stats.conf /etc/apache2/sites-available/000-default.conf
 
-# Y el archivo .env donde guardamos las variables de las contraseñas y nombres de usaurio
+### Y el archivo .env donde guardamos las variables de las contraseñas y nombres de usuario
+
+
 
 ### Reiniciamos el servicio de Apache 
 systemctl restart apache2
