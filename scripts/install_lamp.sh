@@ -4,7 +4,7 @@
 set -x
 
 # Actualizamos los repositorios
-# apt update
+apt update
 
 # Actualizamos los paquetes
 
@@ -30,5 +30,4 @@ systemctl restart apache2
 cp ../php/index.php /var/www/html
 
 # Modificamos el propietario y el grupo del directorio /var/www/html
-
 chown -R www-data:www-data /var/www/html

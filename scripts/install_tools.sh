@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Muestra todos los comandos que se van ejecutando
-set -x
+set -ex
 
 # Se importan las variables de configuracion
 source .env
@@ -23,7 +23,7 @@ apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
 # Creamos un usuario que tengo acceso a todas las bases de datos 
 mysql -u root <<< "DROP USER IF EXISTS '$APP_USER'@'%'"
 mysql -u root <<< "CREATE USER '$APP_USER'@'%' IDENTIFIED BY '$APP_PASSWORD';"
-mysql -u root <<< "GRANT ALL PRIVILEGES ON *.* TO '$APP_USER'@''%';"
+mysql -u root <<< "GRANT ALL PRIVILEGES ON *.* TO '$APP_USER'@'%';"
 
 
 # Instalamos Adminer 
@@ -44,7 +44,7 @@ apt install goaccess -y
 mkdir -p /var/www/html/stats 
 
 # Ejecutamos GoAccess en segundo plano 
-goaccess /var/log/apache2/access.log -o /var/www/html/report.html --log-format=COMBINED --real-time-html --daemonize
+goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html --daemonize
 
 # Paso 5. Configuramos la autenticación básica de un directorio
 # Creamos el archivo .htpasswd
